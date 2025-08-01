@@ -1,52 +1,76 @@
-project:
-  name: Bot Auto-Claim Cerita SilverQueen
-  
-features:
-  - Looping semua bearer token dari token.txt
-  - Auto get cerita dari masing-masing akun
-  - Auto klaim cerita oleh akun lain
-  - Skip otomatis jika cerita milik sendiri
-  - Skip jika sudah diklaim (error: Message has already been claimed)
-  - Log aksi setiap klaim
+```markdown
+# 🧠 SilverQueen Auto-Claim Bawuk
 
-requirements:
-  python: ">=3.8"
-  dependencies:
-    - requests
+Bot Python otomatis untuk klaim silang cerita SilverQueen menggunakan beberapa akun yang diotorisasi melalui Bearer Token.
 
-files:
-  - token.txt  # berisi 1 token per baris
-  - silver.py    # script utama
-  - README.yaml
+---
 
-run:
-  command: python main.py
+## 📌 Fitur
 
-token_format:
-  file: token.txt
-  content: |
-    bearer token...
-    ...
+- 🔐 Menggunakan hingga 10 akun dari `token.txt`
+- 📥 Mengambil ID cerita dari setiap akun
+- 🤖 Klaim cerita akun lain secara otomatis
+- 🚫 Melewati cerita jika:
+  - Sudah diklaim
+  - Dicoba klaim oleh pemilik cerita sendiri
+- 🔁 Proses berulang per cerita dan akun
+- 📋 Logging interaktif di terminal
 
-output_example: |
-  📥 Mendapatkan cerita dari Token 1
-  📤 Token 2 mencoba klaim → ✅ Berhasil
-  📤 Token 3 mencoba klaim → ❌ Message has already been claimed
-  📤 Token 4 mencoba klaim → ✅ Berhasil
+---
 
-handling:
-  errors:
-    - "You cannot claim your own message" : skip klaim
-    - "Message has already been claimed" : lanjut ke cerita berikutnya
-    - timeout or connection error : retry / skip
+## ⚙️ Instalasi
 
-tips:
-  - Gunakan max 5 akun per hari agar tidak over-limit
-  - Upload cerita baru sebelum menjalankan bot
-  - Token bisa diambil dari browser (DevTools → Network → Headers → Authorization)
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/namamu/botsilver.git
+   cd botsilver
+````
 
-disclaimer: >
-  Script ini dibuat hanya untuk tujuan edukasi.
-  Segala penyalahgunaan menjadi tanggung jawab pengguna masing-masing.
+2. **Install dependencies**
 
-author: bawukxfahrur
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Tambahkan token**
+   Buat file `token.txt` dan isi dengan 1 token Bearer per baris:
+
+   ```
+   bearer 1292...
+   ...
+   ```
+
+---
+
+## 🚀 Cara Menjalankan
+
+```bash
+python claim.py
+```
+
+> Bot akan mulai mengambil cerita dari masing-masing token, lalu token lain akan mencoba mengklaimnya. Proses ini diulang hingga seluruh cerita diproses.
+
+---
+
+## 📌 Catatan Penting
+
+* Token harus valid dan aktif.
+* Pastikan tidak mencantumkan token pribadi jika membagikan proyek ini.
+* Tidak mendukung login Google — hanya token Bearer.
+
+---
+
+## ⚠️ Disclaimer
+
+Script ini hanya untuk **penelitian dan pembelajaran pribadi**. Tidak disarankan digunakan untuk aktivitas yang melanggar **Terms of Service** dari situs terkait.
+
+---
+
+## 📄 Lisensi
+
+[MIT License](LICENSE)
+
+```
+
+Jika kamu ingin, saya juga bisa bantu konversi ke file `.md` langsung atau bantu unggah ke GitHub jika sudah ada repo-nya.
+```
