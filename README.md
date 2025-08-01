@@ -20,10 +20,10 @@ Bot Python otomatis untuk klaim silang cerita SilverQueen menggunakan beberapa a
 ## ⚙️ Instalasi
 
 1. **Clone repository**
-   ```bash
+   ``` bash
    git clone https://github.com/namamu/botsilver.git
    cd botsilver
-````
+```
 
 2. **Install dependencies**
 
