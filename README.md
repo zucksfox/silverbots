@@ -44,7 +44,7 @@ Bot Python otomatis untuk klaim silang cerita SilverQueen menggunakan beberapa a
 ## 🚀 Cara Menjalankan
 
 ```bash
-python claim.py
+python silver.py
 ```
 
 > Bot akan mulai mengambil cerita dari masing-masing token, lalu token lain akan mencoba mengklaimnya. Proses ini diulang hingga seluruh cerita diproses.
