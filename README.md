@@ -18,10 +18,10 @@
 ## ⚙️ Instalasi
 
 1. **Clone repository**
-   ``` bash
+   ```bash
    git clone https://github.com/namamu/botsilver.git
    cd botsilver
-```
+    ```
 
 2. **Install dependencies**
 
@@ -32,9 +32,8 @@
 3. **Tambahkan token**
    Buat file `token.txt` dan isi dengan 1 token Bearer per baris:
 
-   ```
+   ```bash
    bearer 1292...
-   ...
    ```
 
 ---
@@ -67,7 +66,3 @@ Script ini hanya untuk **penelitian dan pembelajaran pribadi**. Tidak disarankan
 
 [MIT License](LICENSE)
 
-```
-
-Jika kamu ingin, saya juga bisa bantu konversi ke file `.md` langsung atau bantu unggah ke GitHub jika sudah ada repo-nya.
-```
