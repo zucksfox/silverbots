@@ -1,4 +1,3 @@
-```markdown
 # 🧠 SilverQueen Auto-Claim Bawuk
 
 Bot Python otomatis untuk klaim silang cerita SilverQueen menggunakan beberapa akun yang diotorisasi melalui Bearer Token.
